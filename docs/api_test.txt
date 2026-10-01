@@ -1,0 +1,98 @@
+$ curl -i localhost:5000/api/health
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     39 100     39   0      0  12357      0                              0100     39 100     39   0      0  10375      0                              0100     39 100     39   0      0   9004      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:07 GMT
+Content-Type: application/json
+Content-Length: 39
+Connection: close
+
+{"status":"ok","student":"2412111011"}
+
+
+$ curl -i localhost:5000/api/students?lop=K65A
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     56 100     56   0      0  24702      0                              0100     56 100     56   0      0  22745      0                              0100     56 100     56   0      0  21140      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:08 GMT
+Content-Type: application/json
+Content-Length: 56
+Connection: close
+
+[{"diem":8.5,"id":1,"lop":"K65A","ten":"Nguyen Van A"}]
+
+
+$ curl -i localhost:5000/api/students/1
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     54 100     54   0      0  20817      0                              0100     54 100     54   0      0  19299      0                              0100     54 100     54   0      0  18102      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:08 GMT
+Content-Type: application/json
+Content-Length: 54
+Connection: close
+
+{"diem":8.5,"id":1,"lop":"K65A","ten":"Nguyen Van A"}
+
+
+$ curl -i localhost:5000/api/students/99
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     22 100     22   0      0   1187      0                              0100     22 100     22   0      0   1176      0                              0100     22 100     22   0      0   1166      0                              0
+HTTP/1.1 404 NOT FOUND
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:08 GMT
+Content-Type: application/json
+Content-Length: 22
+Connection: close
+
+{"error":"not found"}
+
+
+$ curl -i -X POST localhost:5000/api/students -H Content-Type: application/json -d {"ten":"C"}
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     37 100     26 100     11  12695   5371                              0100     37 100     26 100     11  11791   4988                              0100     37 100     26 100     11  11012   4659                              0
+HTTP/1.1 400 BAD REQUEST
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:09 GMT
+Content-Type: application/json
+Content-Length: 26
+Connection: close
+
+{"error":"missing field"}
+
+
+$ curl -i -X POST localhost:5000/api/students -H Content-Type: application/json -d {"ten":"C","lop":"K65A","diem":11}
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     64 100     30 100     34  14005  15873                              0100     64 100     30 100     34  12864  14579                              0100     64 100     30 100     34  12091  13704                              0
+HTTP/1.1 400 BAD REQUEST
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:09 GMT
+Content-Type: application/json
+Content-Length: 30
+Connection: close
+
+{"error":"diem must be 0-10"}
+
+
+$ curl -i -X POST localhost:5000/api/students -H Content-Type: application/json -d {"ten":"Le Van C","lop":"K65A","diem":9}
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     88 100     48 100     40  16836  14030                              0100     88 100     48 100     40  15727  13106                              0100     88 100     48 100     40  14814  12345                              0
+HTTP/1.1 201 CREATED
+Server: Werkzeug/3.1.9 Python/3.13.7
+Date: Wed, 30 Sep 2026 11:37:09 GMT
+Content-Type: application/json
+Content-Length: 48
+Connection: close
+
+{"diem":9,"id":3,"lop":"K65A","ten":"Le Van C"}
+
+
