@@ -1,0 +1,20 @@
+*   95b4921 merge: resolve README conflict
+|\  
+| * c015f0d docs: update readme title on develop
+| *   9351afa Merge pull request #2 from hvu788283-droid/feature/docker
+| |\  
+| | * c088a75 docs: update readme
+| | * e28182a feat: add docker compose with nginx reverse proxy
+| | * ea3977f feat: add docker compose with nginx reverse proxy
+| | * b820452 feat: add Dockerfile and dockerignore
+| |/  
+| *   e474628 Merge pull request #1 from hvu788283-droid/feature/web-app
+| |\  
+| | * 4e7a596 docs: add api test results
+| | * ee3b304 feat: add flask app with home page and health api
+| | * 57bc2d0 feat: add student data and static css
+| |/  
+* / f67582a docs: update readme title on main
+|/  
+* 4d53d9f chore: add gitignore and fix readme
+* 2e1fb49 chore: init project
