@@ -1,20 +1,15 @@
 [
-  {
-    "id": 1,
-    "ten": "Nguyen Van A",
-    "lop": "K65A",
-    "diem": 8.5
-  },
-  {
-    "id": 2,
-    "ten": "Tran Thi B",
-    "lop": "K65B",
-    "diem": 7.0
-  },
-  {
-    "id": 3,
-    "ten": "Sinh Vien Moi",
-    "lop": "K65A",
-    "diem": 8
-  }
+  {"id": 1, "ten": "Nguyen Van A", "lop": "K65A", "diem": 8.5},
+  {"id": 2, "ten": "Tran Thi B", "lop": "K65B", "diem": 7.0},
+  {"id": 3, "ten": "Sinh Vien Moi", "lop": "K65A", "diem": 8},
+  {"id": 2412111011, "ten": "Vu Minh Hieu", "lop": "CT2801", "diem": 8.5},
+  {"id": 2412111012, "ten": "Nguyen Thanh An", "lop": "CT2801", "diem": 7.5},
+  {"id": 2412111013, "ten": "Tran Quoc Bao", "lop": "CT2801", "diem": 8.0},
+  {"id": 2412111014, "ten": "Le Thi Cam", "lop": "CT2801", "diem": 9.0},
+  {"id": 2412111015, "ten": "Pham Duc Duy", "lop": "CT2801", "diem": 6.5},
+  {"id": 2412111016, "ten": "Hoang Thi Giang", "lop": "CT2801", "diem": 7.0},
+  {"id": 2412111017, "ten": "Dang Van Hung", "lop": "CT2801", "diem": 8.0},
+  {"id": 2412111018, "ten": "Bui Thi Lan", "lop": "CT2801", "diem": 9.5},
+  {"id": 2412111019, "ten": "Do Minh Khoa", "lop": "CT2801", "diem": 7.5},
+  {"id": 2412111020, "ten": "Ngo Thi Mai", "lop": "CT2801", "diem": 8.5}
 ]
